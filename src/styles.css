@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita scroll en body */
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: skyblue;
+  box-sizing: border-box;
+}
+
+.nav {
+  background: #333;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  overflow: hidden; /* Importante: evita scroll aquí */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Permite que los hijos usen flex correctamente */
+}
+
+/* Enlaces del navbar */
+a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+a:hover {
+  color: skyblue;
+}
